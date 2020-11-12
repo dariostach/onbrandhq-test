@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'rol_id',
     ];
 
     /**
@@ -40,4 +41,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function rol(){ // to create the relation with Roles
+        return $this->hasOne('App\Models\Rol', 'id', 'rol_id');
+    }
 }

@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
+Route::get('/home/approve', [App\Http\Controllers\HomeController::class, 'approve'])->name('approve');
+Route::get('/home/see_approved', [App\Http\Controllers\HomeController::class, 'see_approved'])->name('see_approved');

@@ -20,6 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
-Route::get('/home/approve', [App\Http\Controllers\HomeController::class, 'approve'])->name('approve');
-Route::get('/home/see_approved', [App\Http\Controllers\HomeController::class, 'see_approved'])->name('see_approved');
+Route::get('/home/create', [App\Http\Controllers\ProductController::class, 'create_product'])->name('create_product');
+Route::get('/home/approve', [App\Http\Controllers\ProductController::class, 'approve'])->name('approve');
+Route::get('/home/see_approved', [App\Http\Controllers\ProductController::class, 'see_approved'])->name('see_approved');

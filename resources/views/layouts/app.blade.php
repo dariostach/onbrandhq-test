@@ -54,7 +54,7 @@
                         @else
                             @if (Auth::user()->rol->name == 'create')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('create') }}">Create product</a>
+                                    <a class="nav-link" href="{{ route('create_product') }}">Create product</a>
                                 </li>
                             @endif
                             @if (Auth::user()->rol->name == 'approve')
